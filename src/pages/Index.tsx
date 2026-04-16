@@ -7,14 +7,29 @@ import ProductGrid from "@/components/ProductGrid";
 import Testimonials from "@/components/TestimonialsDemo";
 import FooterTapedDesign from "@/components/ui/footer-taped-design";
 import { useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import MobileHome from "./MobileHome";
 
 const Index = () => {
   const [searchParams] = useSearchParams();
-  const sex = searchParams.get("sex") as "Men" | "Women" | null;
-  const type = searchParams.get("type") as "trending" | "seasonal" | "accessories" | "summer" | "all-season" | null;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  if (isMobile) {
+    return <MobileHome />;
+  }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-[1400px] mx-auto px-4 py-4">
         {/* Main container card */}
         <div className="bg-card rounded-3xl overflow-hidden shadow-sm">

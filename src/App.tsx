@@ -12,6 +12,9 @@ import Profile from "./pages/Profile.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import FooterDemo from "./pages/FooterDemo.tsx";
 import Preloader from "@/components/ui/preloader";
+import MobileHome from "./pages/MobileHome.tsx";
+import MobileCollection from "./pages/MobileCollection.tsx";
+import MobilePDP from "./pages/MobilePDP.tsx";
 
 const queryClient = new QueryClient();
 
@@ -25,8 +28,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/collections" element={<MobileCollection />} />
+          <Route path="/product/apex-core-tights" element={<MobilePDP />} />
           <Route path="/footer-demo" element={<FooterDemo />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/profile" element={<Profile />} />

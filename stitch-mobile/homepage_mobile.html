@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;900&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#dbdddd",
+                        "secondary-fixed-dim": "#d4d4d4",
+                        "on-secondary-fixed-variant": "#5b5b5b",
+                        "surface-dim": "#d3d5d5",
+                        "error": "#b02500",
+                        "outline": "#767777",
+                        "on-primary-container": "#5e5600",
+                        "tertiary-container": "#febb28",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#5a5c5c",
+                        "primary-fixed-dim": "#eedd00",
+                        "primary-container": "#fdec00",
+                        "on-tertiary-container": "#563b00",
+                        "tertiary-fixed": "#febb28",
+                        "tertiary": "#795500",
+                        "secondary-dim": "#4f4f4f",
+                        "primary": "#645d00",
+                        "secondary": "#5b5b5b",
+                        "surface": "#f6f6f6",
+                        "secondary-container": "#e2e2e2",
+                        "background": "#f6f6f6",
+                        "on-primary-fixed": "#4a4400",
+                        "inverse-primary": "#fdec00",
+                        "on-secondary-fixed": "#3f3f3f",
+                        "tertiary-dim": "#694a00",
+                        "error-dim": "#b92902",
+                        "inverse-surface": "#0c0f0f",
+                        "on-background": "#2d2f2f",
+                        "primary-fixed": "#fdec00",
+                        "on-tertiary": "#fff1de",
+                        "inverse-on-surface": "#9c9d9d",
+                        "outline-variant": "#acadad",
+                        "on-primary-fixed-variant": "#686100",
+                        "tertiary-fixed-dim": "#efad16",
+                        "surface-container-low": "#f0f1f1",
+                        "surface-tint": "#645d00",
+                        "primary-dim": "#585100",
+                        "on-error": "#ffefec",
+                        "on-secondary-container": "#525252",
+                        "on-error-container": "#520c00",
+                        "surface-container": "#e7e8e8",
+                        "on-primary": "#fff5a3",
+                        "on-surface": "#2d2f2f",
+                        "surface-variant": "#dbdddd",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#614400",
+                        "surface-container-high": "#e1e3e3",
+                        "error-container": "#f95630",
+                        "surface-bright": "#f6f6f6",
+                        "on-secondary": "#f3f3f3",
+                        "on-tertiary-fixed": "#3c2900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Lexend", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .italic-display {
+            font-style: italic;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body">
+<!-- Top App Bar (Shared Logic Applied) -->
+<header class="sticky top-0 z-50 flex items-center bg-surface/80 backdrop-blur-md px-4 py-3 justify-between border-b border-outline-variant/15">
+<div class="flex items-center gap-4">
+<div class="text-on-surface flex size-10 items-center justify-center" data-icon="menu" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined">menu</span>
+</div>
+<h2 class="text-on-surface font-headline text-2xl font-black italic tracking-tighter">VEXO</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center text-on-surface">
+<div data-icon="search" data-size="24px">
+<span class="material-symbols-outlined">search</span>
+</div>
+</button>
+<button class="flex size-10 items-center justify-center text-on-surface relative">
+<div data-icon="shopping_cart" data-size="24px">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<span class="absolute top-1 right-1 bg-primary-container text-on-primary-container text-[10px] font-bold px-1 rounded-sm">2</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[707px] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Intense close-up of a professional athlete sprinting on a dark track with dramatic spotlighting and high-contrast shadows." style="background-image: linear-gradient(rgba(12, 15, 15, 0.2) 0%, rgba(12, 15, 15, 0.8) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLMohVN5S7oEAlNAH1wn6Lq0FQ-uY4Vp6B4C3oYgOBI6kM7lGuqNOidU2qnWPV2oWRMl0wgWIT-IcoQa43FojuQhz94ORCv1l5G-V6O4JhNrktGVqvDTxtMq7juktOyoIF9MBOwrRw9c3rnrPUgto2O7j-5IznPl35rWG-pRHy-ngQbS_EruYvQPBl5XliJfim41QrdGaT6GpyaqIIdzUjtL_i-2Qi12saGXjquadot8VNaAgZQ0I0RgjoTHxlOMpCU039ktRoo_19');">
+</div>
+<div class="relative h-full flex flex-col justify-end p-6 pb-12 gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-primary-container font-label font-bold text-sm tracking-widest uppercase">The Lab Series v.04</span>
+<h1 class="text-surface-container-lowest text-6xl font-headline font-black italic-display leading-[0.9] tracking-tighter uppercase">
+                        Performance<br/>Redefined
+                    </h1>
+<p class="text-surface-variant text-lg max-w-[80%] font-medium leading-tight">
+                        Engineered for elite output. Tested in the lab, proven on the field.
+                    </p>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary-container text-on-primary-container font-headline font-black py-4 text-center tracking-wider uppercase hover:bg-primary-fixed transition-colors">
+                        Explore the Lab
+                    </button>
+<button class="w-full bg-white/10 backdrop-blur-md text-white border border-white/20 font-headline font-black py-4 text-center tracking-wider uppercase">
+                        View Collections
+                    </button>
+</div>
+</div>
+</section>
+<!-- Stats Strip -->
+<div class="grid grid-cols-3 bg-inverse-surface py-4 px-2 divide-x divide-outline/20">
+<div class="flex flex-col items-center">
+<span class="text-primary-container font-headline font-bold text-lg">24%</span>
+<span class="text-outline-variant text-[10px] uppercase font-bold tracking-tighter">Faster Recovery</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-primary-container font-headline font-bold text-lg">1.2kg</span>
+<span class="text-outline-variant text-[10px] uppercase font-bold tracking-tighter">Avg. Weight reduction</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-primary-container font-headline font-bold text-lg">PRO</span>
+<span class="text-outline-variant text-[10px] uppercase font-bold tracking-tighter">Grade Compression</span>
+</div>
+</div>
+<!-- Women's Series Section -->
+<section class="py-12 px-4 bg-surface">
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="text-on-background font-headline text-3xl font-black italic uppercase leading-none tracking-tighter">Women's Series</h2>
+<div class="h-1 w-12 bg-primary-container mt-2"></div>
+</div>
+<a class="text-primary font-bold text-sm flex items-center gap-1 uppercase tracking-tighter" href="#">
+                    Shop All 
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-3">
+<div class="aspect-[3/4] bg-surface-container-high relative group overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="Athletic woman in technical compression gear practicing yoga in a high-tech minimalist studio with clinical white lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx88K0kSDVPpeftjp3xW5kk1hMKJFsMvOTRqZRPjTYfQjynlOwRmaSWr0JjkE5NvmsqRd89x7EU6uu8St6Sq58f4IqSuIxSR60niXKXu9MxKaqgKhZQOsMyfImR5sYPtx0tFYPr_D4Xx8vhCNvTxTdWokcfqANZ68RmB26wfWP7JZnivWetbqLm--x2Bw9qbd5qCghgsfelM41lBarqe_lBIxpLpTzZSe5Rrm1-n8r_iIDFnzrvSN8nrOmb6bnq3JrC-ZE1mx0ASDO"/>
+<div class="absolute bottom-3 left-3">
+<span class="bg-inverse-surface text-white text-[10px] font-bold px-2 py-1 uppercase">Top Seller</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-sm uppercase">Apex Leggings</h3>
+<p class="text-on-surface-variant text-xs mb-1">Carbon Black</p>
+<p class="font-headline font-black text-primary">$120.00</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="aspect-[3/4] bg-surface-container-high relative group overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="Close up of high-performance women's running top with visible technical fabric texture and precision stitching." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaYFRoSD0MbHn09GUGYMrNgG86h4m5O_kmaSzjDtZ_7qww6coBsuOwMaUaY7n0_gkmAUukYof5qUh_f65OKonoC2UFCbsZUcayIR5k5ga1ajpF9Qcmn92scsM3ozEFigFbhUZR-wt_-wH0v3jARqDdFuzu5x0iHdj-IVUJAlMwYRr3xuQTv-2_36-D4aNDtPYrm9swN4XC-MOvkLxUA2QWOc8zxXL7uFXomlhKlp4-3vaaalNurCYz9ebzpf7LUdVRHjO9iJnlO_66"/>
+<div class="absolute top-3 right-3">
+<div class="size-2 rounded-full bg-error"></div>
+</div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-sm uppercase">Vortex Racerback</h3>
+<p class="text-on-surface-variant text-xs mb-1">Slate Grey</p>
+<p class="font-headline font-black text-primary">$85.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-surface-container-low py-16 px-4">
+<h2 class="text-on-background font-headline text-3xl font-black italic uppercase text-center mb-12 tracking-tighter">Field Tested</h2>
+<div class="flex flex-col gap-8">
+<div class="relative bg-surface-container-lowest p-6 border-l-4 border-primary-container">
+<div class="flex gap-1 mb-4 text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface font-medium text-lg italic mb-4 leading-snug">
+                        "The compression technology is on another level. I've cut my recovery time by nearly a third since switching to VEXO Lab gear."
+                    </p>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-surface-container-highest flex items-center justify-center font-headline font-bold text-sm">MK</div>
+<div>
+<p class="font-headline font-bold text-sm uppercase">Marcus K.</p>
+<p class="text-on-surface-variant text-xs uppercase tracking-tighter">Pro Triathlete</p>
+</div>
+</div>
+</div>
+<div class="relative bg-surface-container-lowest p-6 border-l-4 border-primary-container">
+<div class="flex gap-1 mb-4 text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface font-medium text-lg italic mb-4 leading-snug">
+                        "Clean lines, brutalist aesthetic, but the engineering is pure precision. VEXO doesn't just look good, it functions perfectly."
+                    </p>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-surface-container-highest flex items-center justify-center font-headline font-bold text-sm">SL</div>
+<div>
+<p class="font-headline font-bold text-sm uppercase">Sarah L.</p>
+<p class="text-on-surface-variant text-xs uppercase tracking-tighter">Olympic Weightlifter</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="bg-primary-container px-6 py-16 flex flex-col gap-6">
+<h2 class="text-on-primary-container font-headline text-4xl font-black italic uppercase leading-[0.8] tracking-tighter">Join the<br/>Inner Circle</h2>
+<p class="text-on-primary-container/80 font-medium leading-tight">Get early access to Lab Drops and performance data analysis.</p>
+<div class="flex flex-col gap-2">
+<input class="bg-surface-container-lowest border-none py-4 px-4 font-headline font-bold text-sm tracking-widest placeholder:text-outline focus:ring-2 focus:ring-primary" placeholder="ENTER EMAIL" type="email"/>
+<button class="bg-inverse-surface text-surface-container-lowest font-headline font-black py-4 uppercase tracking-widest hover:bg-black transition-colors">
+                    Subscribe
+                </button>
+</div>
+</section>
+</main>
+<footer class="bg-inverse-surface text-surface-container-lowest pt-16 pb-8 px-6">
+<div class="flex flex-col gap-12">
+<div class="flex flex-col gap-6">
+<h2 class="font-headline text-4xl font-black italic tracking-tighter uppercase">VEXO</h2>
+<div class="flex gap-4">
+<div class="size-10 border border-outline-variant/30 flex items-center justify-center rounded-lg" data-icon="facebook">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="size-10 border border-outline-variant/30 flex items-center justify-center rounded-lg" data-icon="instagram">
+<span class="material-symbols-outlined">photo_camera</span>
+</div>
+<div class="size-10 border border-outline-variant/30 flex items-center justify-center rounded-lg" data-icon="twitter">
+<span class="material-symbols-outlined">chat</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<h4 class="font-headline font-bold uppercase text-primary-container text-xs tracking-widest">Navigation</h4>
+<ul class="flex flex-col gap-2 text-sm font-medium text-outline-variant">
+<li>The Lab</li>
+<li>Collections</li>
+<li>Technology</li>
+<li>Pro Program</li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline font-bold uppercase text-primary-container text-xs tracking-widest">Support</h4>
+<ul class="flex flex-col gap-2 text-sm font-medium text-outline-variant">
+<li>Shipping</li>
+<li>Returns</li>
+<li>Contact</li>
+<li>FAQs</li>
+</ul>
+</div>
+</div>
+<div class="pt-12 border-t border-outline/20 flex flex-col gap-4">
+<p class="text-[10px] text-outline-variant uppercase tracking-widest font-bold">© 2024 VEXO PERFORMANCE LABS. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-4 text-[10px] text-outline uppercase font-bold tracking-tighter">
+<span>Privacy Policy</span>
+<span>Terms of Service</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Shared BottomNavBar (Exactly as defined) -->
+<div class="fixed bottom-0 left-0 right-0 z-50">
+<div class="flex gap-2 border-t border-[#f4f3e6] bg-[#fcfcf8] px-4 pb-3 pt-2">
+<a class="just flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-[#1d1b0c]" href="#">
+<div class="text-[#1d1b0c] flex h-8 items-center justify-center" data-icon="House" data-size="24px" data-weight="fill">
+<svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path>
+</svg>
+</div>
+<p class="text-[#1d1b0c] text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
+</a>
+<a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#a19b45]" href="#">
+<div class="text-[#a19b45] flex h-8 items-center justify-center" data-icon="Flask" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.69,199.77,160,96.92V40h8a8,8,0,0,0,0-16H88a8,8,0,0,0,0,16h8V96.92L34.31,199.77A16,16,0,0,0,48,224H208a16,16,0,0,0,13.72-24.23ZM110.86,103.25A7.93,7.93,0,0,0,112,99.14V40h32V99.14a7.93,7.93,0,0,0,1.14,4.11L183.36,167c-12,2.37-29.07,1.37-51.75-10.11-15.91-8.05-31.05-12.32-45.22-12.81ZM48,208l28.54-47.58c14.25-1.74,30.31,1.85,47.82,10.72,19,9.61,35,12.88,48,12.88a69.89,69.89,0,0,0,19.55-2.7L208,208Z"></path>
+</svg>
+</div>
+<p class="text-[#a19b45] text-xs font-medium leading-normal tracking-[0.015em]">Lab</p>
+</a>
+<a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#a19b45]" href="#">
+<div class="text-[#a19b45] flex h-8 items-center justify-center" data-icon="TShirt" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M247.59,61.22,195.83,33A8,8,0,0,0,192,32H160a8,8,0,0,0-8,8,24,24,0,0,1-48,0,8,8,0,0,0-8-8H64a8,8,0,0,0-3.84,1L8.41,61.22A15.76,15.76,0,0,0,1.82,82.48l19.27,36.81A16.37,16.37,0,0,0,35.67,128H56v80a16,16,0,0,0,16,16H184a16,16,0,0,0,16-16V128h20.34a16.37,16.37,0,0,0,14.58-8.71l19.27-36.81A15.76,15.76,0,0,0,247.59,61.22ZM35.67,112a.62.62,0,0,1-.41-.13L16.09,75.26,56,53.48V112ZM184,208H72V48h16.8a40,40,0,0,0,78.38,0H184Zm36.75-96.14a.55.55,0,0,1-.41.14H200V53.48l39.92,21.78Z"></path>
+</svg>
+</div>
+<p class="text-[#a19b45] text-xs font-medium leading-normal tracking-[0.015em]">Collections</p>
+</a>
+<a class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#a19b45]" href="#">
+<div class="text-[#a19b45] flex h-8 items-center justify-center" data-icon="User" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+</svg>
+</div>
+<p class="text-[#a19b45] text-xs font-medium leading-normal tracking-[0.015em]">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

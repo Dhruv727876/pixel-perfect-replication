@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;800;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#5b5b5b",
+                        "surface-container": "#e7e8e8",
+                        "outline": "#767777",
+                        "secondary-dim": "#4f4f4f",
+                        "on-primary-fixed": "#4a4400",
+                        "inverse-primary": "#fdec00",
+                        "primary-dim": "#585100",
+                        "on-error-container": "#520c00",
+                        "surface-bright": "#f6f6f6",
+                        "on-tertiary-container": "#563b00",
+                        "tertiary-dim": "#694a00",
+                        "tertiary-fixed-dim": "#efad16",
+                        "on-primary-fixed-variant": "#686100",
+                        "secondary-fixed": "#e2e2e2",
+                        "surface-container-highest": "#dbdddd",
+                        "on-secondary-fixed": "#3f3f3f",
+                        "secondary-fixed-dim": "#d4d4d4",
+                        "on-primary-container": "#5e5600",
+                        "on-secondary-fixed-variant": "#5b5b5b",
+                        "on-primary": "#fff5a3",
+                        "primary-fixed-dim": "#eedd00",
+                        "on-secondary-container": "#525252",
+                        "on-secondary": "#f3f3f3",
+                        "on-background": "#2d2f2f",
+                        "on-tertiary-fixed": "#3c2900",
+                        "primary-container": "#fdec00",
+                        "surface-variant": "#dbdddd",
+                        "on-tertiary": "#fff1de",
+                        "surface-container-high": "#e1e3e3",
+                        "error-container": "#f95630",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#5a5c5c",
+                        "on-error": "#ffefec",
+                        "outline-variant": "#acadad",
+                        "secondary-container": "#e2e2e2",
+                        "on-surface": "#2d2f2f",
+                        "inverse-surface": "#0c0f0f",
+                        "error-dim": "#b92902",
+                        "primary-fixed": "#fdec00",
+                        "surface-tint": "#645d00",
+                        "primary": "#645d00",
+                        "tertiary": "#795500",
+                        "background": "#f6f6f6",
+                        "tertiary-fixed": "#febb28",
+                        "error": "#b02500",
+                        "surface": "#f6f6f6",
+                        "inverse-on-surface": "#9c9d9d",
+                        "tertiary-container": "#febb28",
+                        "on-tertiary-fixed-variant": "#614400",
+                        "surface-dim": "#d3d5d5",
+                        "surface-container-low": "#f0f1f1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Lexend"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .italic-force { font-style: italic; }
+        .text-velocity-yellow { color: #fdec00; }
+        .bg-velocity-yellow { background-color: #fdec00; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex items-center justify-between px-6 h-20 backdrop-blur-md bg-opacity-80 bg-[#f6f6f6] dark:bg-[#0c0f0f] z-50">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-2xl font-black italic tracking-tighter text-[#0c0f0f] dark:text-[#ffffff] font-headline">WOMEN'S SERIES</span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-on-surface">shopping_bag</span>
+</div>
+</header>
+<main class="pt-24 pb-20 px-4 max-w-md mx-auto">
+<!-- Hero Editorial Banner -->
+<section class="relative mb-8 h-48 overflow-hidden bg-inverse-surface group">
+<img class="w-full h-full object-cover opacity-70 grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="dynamic close-up of a female athlete in yellow high-performance sportswear against a dark urban concrete background with motion blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIToDoItMqOMIzQ5duhy-v6zMC3X4k-fZImakcLEVWAUY1d4xq6iXClgFqp7g8032NrER6zlaYt3YU9EWp_5HInyqpuUQOOxD0bSG2fcv9UFN7KQjyeKV8SlLwPzDwo2LbI897HGGfauR7rj8hgHNJ28ScUmNxud08R8iI-puzueTTFr5fZ9OnrOCfaEZXsXUQl5IDtklNGT_0dSWZ0zjNXBc8hE-v1LTku3CpdDmhg76rLnJiPLnoz8ln4lTpgGXiz3Wv3XDyk-p8"/>
+<div class="absolute inset-0 flex flex-col justify-end p-4">
+<div class="font-headline text-4xl font-black italic text-surface-container-lowest leading-none tracking-tighter uppercase">
+                    Precision<br/>Velocity
+                </div>
+<div class="bg-primary-container inline-block px-2 py-1 mt-2 w-max">
+<span class="font-label text-[10px] font-bold tracking-widest text-on-primary-container">DROP 04 / TECH WEAR</span>
+</div>
+</div>
+</section>
+<!-- Segmented Filter Control -->
+<nav class="flex overflow-x-auto no-scrollbar space-x-1 mb-10 bg-surface-container-low p-1">
+<button class="whitespace-nowrap px-6 py-2 bg-primary-container text-on-primary-container font-label font-bold text-[11px] tracking-widest italic-force skew-x-[-12deg]">
+<span class="inline-block skew-x-[12deg]">ALL ITEMS</span>
+</button>
+<button class="whitespace-nowrap px-6 py-2 text-on-surface opacity-40 hover:opacity-100 transition-opacity font-label font-bold text-[11px] tracking-widest italic-force">
+                NEW ARRIVALS
+            </button>
+<button class="whitespace-nowrap px-6 py-2 text-on-surface opacity-40 hover:opacity-100 transition-opacity font-label font-bold text-[11px] tracking-widest italic-force">
+                BEST SELLERS
+            </button>
+</nav>
+<!-- Technical Badge -->
+<div class="flex items-center justify-between mb-4 border-b border-on-surface/5 pb-2">
+<span class="font-label text-[10px] font-bold text-primary italic">LABORATORY PHASE 02 // COMPRESSION</span>
+<span class="material-symbols-outlined text-sm">tune</span>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 gap-x-3 gap-y-10">
+<!-- Card 01 -->
+<div class="flex flex-col group">
+<div class="relative aspect-[3/4] bg-surface-container-low mb-3 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="female model wearing charcoal gray athletic compression leggings standing in a minimalist white studio with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBknNYVIA0GtHHRFF3a2sEUuF1Ml4tpkfoGqHdWqqbzIE5OFpLClBiYGpNjQ3Al_Dace71a9FwHjG6UMZLY30VWlscUPynRLGNDUk6CVSe482W6UmvK7D7BZ2-AwSklSqTHp4Ao9pbe5seIUgNKYnYT7iFXURCWkdCKrdAPK21OIKwwws7GUUoc-fWpZZLjF1qdK6EncTMnn9FpfrL1fhDrZKFD2nalSigbczFRIc6M9vVSDLIFEZ91J6Ef2sUb0IGRHVcBq3_vYCuN"/>
+<div class="absolute top-2 left-2 bg-inverse-surface px-1.5 py-0.5">
+<span class="text-[8px] font-bold text-surface-bright tracking-widest">LAB 01</span>
+</div>
+</div>
+<div class="px-1">
+<div class="font-headline font-extrabold italic text-lg leading-tight uppercase tracking-tighter">APEX CORE TIGHTS</div>
+<div class="font-label text-[10px] text-secondary tracking-widest mb-2">PRO-COMPRESSION / BLACK</div>
+<div class="font-headline font-bold text-primary">$120.00</div>
+</div>
+</div>
+<!-- Card 02 -->
+<div class="flex flex-col group translate-y-6">
+<div class="relative aspect-[3/4] bg-surface-container-low mb-3 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="female athlete wearing a bright yellow sports bra and matching high waisted shorts in a dark high-contrast industrial gym" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdPNNTdUgl_YwPSNFWoTq2QrHqWS291a_eMzdMlXJkMnByinQaICJ2SyNPEBcsiem1CAmpnr3jjgpNfkdOhWLMXQALdm3SSqHBp2H8hxXNTZC_zPY4GBNLAShzl5R0AvjyalqpzgdyAHzvDq3jx29Z4AwLZZoVWsOoGlaedKOiIytE8Dkpb-ts0ZSnnZW4qM7mgQqSa-KV-gyWY-aTeyloxxBl31cNfsDUWw7O5vJ2IU561noDJ9WfQ_u0B0-dtvpUOYxw1ZGVIP1A"/>
+<div class="absolute top-2 left-2 bg-primary-container px-1.5 py-0.5">
+<span class="text-[8px] font-bold text-on-primary-container tracking-widest">NEW</span>
+</div>
+</div>
+<div class="px-1">
+<div class="font-headline font-extrabold italic text-lg leading-tight uppercase tracking-tighter">KINETIC BRA</div>
+<div class="font-label text-[10px] text-secondary tracking-widest mb-2">AEROREADY / VELOCITY</div>
+<div class="font-headline font-bold text-primary">$65.00</div>
+</div>
+</div>
+<!-- Card 03 -->
+<div class="flex flex-col group">
+<div class="relative aspect-[3/4] bg-surface-container-low mb-3 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="tight cropped shot of tech-fabric workout top with visible seams and moisture-wicking texture in light grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvQ23QYKXthsYVEe30JntmpZTR02x9Ty-hASvpCSsWppN9MCllibvt5T1XaB_cU0xwTDmJzl6fBXF7H7WyhHfChtEt_5DghYpoevmnk0Gk1xtzvmnp0VX3e1aQh42qUwgdMYx6_2jh12Xp6qNsbtp6y8Ks6yNCqauE60iV9PzucWSuaB6bCP8IwxBEUF1Ujb5C6hzPu6wrUOGjfPxmP2cFaoalp5m6U3aLv7k2w-6LfTv8wNcEVJnyJvsSl4IEZqbKmXOW6ZYIvWO4"/>
+<div class="absolute bottom-2 left-2 bg-inverse-surface/80 backdrop-blur-sm px-2 py-0.5">
+<span class="text-[8px] font-bold text-surface-bright tracking-widest">ECO-FIBER</span>
+</div>
+</div>
+<div class="px-1">
+<div class="font-headline font-extrabold italic text-lg leading-tight uppercase tracking-tighter">FLUX SHELL</div>
+<div class="font-label text-[10px] text-secondary tracking-widest mb-2">THERMAL / CHROME</div>
+<div class="font-headline font-bold text-primary">$185.00</div>
+</div>
+</div>
+<!-- Card 04 -->
+<div class="flex flex-col group translate-y-6">
+<div class="relative aspect-[3/4] bg-surface-container-low mb-3 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="dynamic shot of a woman running outdoors in sleek black athletic shorts with yellow reflective accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0J4kqs4jGFh8Mi0f3C2X6nFYA6nXby8sDt9oDqSGwjfPpbJ1mgntqfF6JaieAqWf4Yqq26nJb9-esF7CX8KE8VWtcSxJie-G38AkuckG4zzumt7qD0PCU797JzYKItWEpKLZL5UEhIMZID7-JICEjD2t7htDFb7mVP8WBXK9sGosI0-4O1ocwMlStFPNcrWR0Mz_NCF5oxmTwpcioSlYM0S1nykT-gcfvMo_OkEqn8HCWHd4ERU1kd6BrFfhIIGEh9KmXviqP461G"/>
+</div>
+<div class="px-1">
+<div class="font-headline font-extrabold italic text-lg leading-tight uppercase tracking-tighter">PACE SHORT</div>
+<div class="font-label text-[10px] text-secondary tracking-widest mb-2">ULTRA-LIGHT / SHADOW</div>
+<div class="font-headline font-bold text-primary">$45.00</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More Editorial -->
+<div class="mt-20 flex flex-col items-center">
+<div class="w-12 h-[2px] bg-primary-container mb-4"></div>
+<button class="group flex items-center space-x-2">
+<span class="font-headline font-black italic tracking-tighter text-2xl uppercase group-hover:text-primary transition-colors">LOAD MORE</span>
+<span class="material-symbols-outlined text-primary">arrow_forward_ios</span>
+</button>
+<span class="font-label text-[10px] font-bold tracking-[0.2em] text-outline mt-2 uppercase">Viewing 04 of 28</span>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-16 pb-safe px-4 bg-[#ffffff] dark:bg-[#0c0f0f] border-t-[0.5px] border-[#0c0f0f]/10 dark:border-[#ffffff]/10 shadow-[0_-8px_30px_rgb(0,0,0,0.04)] z-50">
+<button class="flex flex-col items-center justify-center bg-[#fdec00] text-[#0c0f0f] rounded-none px-6 py-2 skew-x-[-12deg] transition-all duration-200">
+<div class="skew-x-[12deg] flex flex-col items-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<span class="font-lexend font-bold uppercase text-[10px] tracking-widest">SHOP</span>
+</div>
+</button>
+<button class="flex flex-col items-center justify-center text-[#0c0f0f] dark:text-[#ffffff] px-6 py-2 opacity-60 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-lexend font-bold uppercase text-[10px] tracking-widest">NEW</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#0c0f0f] dark:text-[#ffffff] px-6 py-2 opacity-60 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-lexend font-bold uppercase text-[10px] tracking-widest">SAVED</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#0c0f0f] dark:text-[#ffffff] px-6 py-2 opacity-60 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">local_mall</span>
+<span class="font-lexend font-bold uppercase text-[10px] tracking-widest">CART</span>
+</button>
+</nav>
+</body></html>

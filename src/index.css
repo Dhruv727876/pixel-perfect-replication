@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -70,22 +70,36 @@
     --highlight-custom: #454ADE;
     --muted-custom: #777777;
 
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-headline: 'Space Grotesk', sans-serif;
+    --font-display: 'Lexend', sans-serif;
+    --font-headline: 'Lexend', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-label: 'Lexend', sans-serif;
     --font-sans-custom: 'Inter', sans-serif;
 
-    /* Vexo Kinetic Editorial Tokens */
-    --vexo-primary: #fffdff;
-    --vexo-primary-container: #f5e442;
-    --vexo-on-primary-fixed: #1f1c00;
-    --vexo-secondary-container: #d90050;
-    --vexo-tertiary-container: #d6e4e8;
-    --vexo-on-tertiary-fixed: #111d21;
-    --vexo-on-tertiary-fixed-variant: #3c494c;
-    --vexo-surface-container-lowest: #0e0e0e;
-    --vexo-surface-container-low: #1c1b1b;
-    --vexo-surface-container-high: #2a2a2a;
-    --vexo-surface-container-highest: #353534;
+    /* Vexo Kinetic Editorial Tokens (Precision Velocity) */
+    --vexo-primary: #645d00;
+    --vexo-primary-container: #fdec00;
+    --vexo-on-primary-fixed: #4a4400;
+    --vexo-secondary: #5b5b5b;
+    --vexo-secondary-container: #e2e2e2;
+    --vexo-tertiary: #795500;
+    --vexo-tertiary-container: #febb28;
+    --vexo-on-tertiary-fixed: #3c2900;
+    --vexo-on-tertiary-fixed-variant: #614400;
+    --vexo-background: #f6f6f6;
+    --vexo-on-background: #2d2f2f;
+    --vexo-surface: #f6f6f6;
+    --vexo-on-surface: #2d2f2f;
+    --vexo-surface-variant: #dbdddd;
+    --vexo-on-surface-variant: #5a5c5c;
+    --vexo-outline: #767777;
+    --vexo-outline-variant: #acadad;
+    --vexo-inverse-surface: #0c0f0f;
+    --vexo-surface-container-lowest: #ffffff;
+    --vexo-surface-container-low: #f0f1f1;
+    --vexo-surface-container: #e7e8e8;
+    --vexo-surface-container-high: #e1e3e3;
+    --vexo-surface-container-highest: #dbdddd;
   }
 }
 
