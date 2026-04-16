@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 20% 82%;
+    --foreground: 0 0% 10%;
+
+    --card: 220 14% 92%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 220 14% 92%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 14% 88%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 216 12% 78%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 216 14% 85%;
+    --input: 216 14% 85%;
+    --ring: 0 0% 10%;
+
+    --radius: 1rem;
+
+    --surface: 220 14% 94%;
+    --surface-foreground: 0 0% 10%;
+
+    --hero-gradient: linear-gradient(180deg, hsl(195 30% 85%) 0%, hsl(180 15% 90%) 100%);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Footer Taped Design Colors */
+    --hightlight-light: #DADBF8;
+    --accent-light: #D9EAE3;
+    --primary-light: #FFCFE1;
+    --secondary-light: #FFFCE5;
+    --primary-custom: #FF0F67;
+    --primary-content: #ffffff;
+    --secondary-custom: #FFF07C;
+    --secondary-content: #0A0A0A;
+    --accent-custom: #439775;
+    --accent-content: #0A0A0A;
+    --neutral-custom: #222222;
+    --neutral-content: #FFFFFF;
+    --base-100: #f0f0f0;
+    --base-200: #ffffff;
+    --base-300: #F2F2F2;
+    --base-content: #0A0A0A;
+    --highlight-custom: #454ADE;
+    --muted-custom: #777777;
+
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-headline: 'Space Grotesk', sans-serif;
+    --font-sans-custom: 'Inter', sans-serif;
+
+    /* Vexo Kinetic Editorial Tokens */
+    --vexo-primary: #fffdff;
+    --vexo-primary-container: #f5e442;
+    --vexo-on-primary-fixed: #1f1c00;
+    --vexo-secondary-container: #d90050;
+    --vexo-tertiary-container: #d6e4e8;
+    --vexo-on-tertiary-fixed: #111d21;
+    --vexo-on-tertiary-fixed-variant: #3c494c;
+    --vexo-surface-container-lowest: #0e0e0e;
+    --vexo-surface-container-low: #1c1b1b;
+    --vexo-surface-container-high: #2a2a2a;
+    --vexo-surface-container-highest: #353534;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1.5px hsl(var(--muted));
+    color: transparent;
+  }
+
+  .text-stroke-light {
+    -webkit-text-stroke: 1px hsl(0 0% 75%);
+    color: transparent;
+  }
+}
