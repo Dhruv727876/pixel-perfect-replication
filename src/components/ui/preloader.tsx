@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { siteConfig } from "@/config/site";
+import { motion, AnimatePresence } from "motion/react";
 
 const Preloader = () => {
   const [loading, setLoading] = useState(true);

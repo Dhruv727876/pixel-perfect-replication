@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { motion } from "motion/react";
 
 /** 
  * HeroSection: Kinetic Editorial
