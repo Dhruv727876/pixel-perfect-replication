@@ -4,8 +4,27 @@ import { useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 
+import { useEffect, useState } from "react";
+import MobileCollection from "./MobileCollection";
+
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  if (isMobile) {
+    return <MobileCollection />;
+  }
+
   const sex = searchParams.get("sex") as "Men" | "Women" | null;
   const type = searchParams.get("type") as "trending" | "seasonal" | "accessories" | "summer" | "all-season" | null;
 

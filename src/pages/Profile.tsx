@@ -7,9 +7,27 @@ import { Separator } from "@/components/ui/separator";
 import Navbar from "@/components/Navbar";
 import { Box, User, Mail, Calendar, ChevronRight, PackageCheck } from "lucide-react";
 
+import { useEffect, useState } from "react";
+import MobileProfile from "./MobileProfile";
+
 const Profile = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  if (isMobile) {
+    return <MobileProfile />;
+  }
 
   if (!user) {
     navigate("/auth");

@@ -15,6 +15,8 @@ import Preloader from "@/components/ui/preloader";
 import MobileHome from "./pages/MobileHome.tsx";
 import MobileCollection from "./pages/MobileCollection.tsx";
 import MobilePDP from "./pages/MobilePDP.tsx";
+import MobileLab from "./pages/MobileLab.tsx";
+import MobileCheckout from "./pages/MobileCheckout.tsx";
 
 const queryClient = new QueryClient();
 
@@ -29,10 +31,11 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/products" element={<Products />} />
           <Route path="/collections" element={<MobileCollection />} />
-          <Route path="/product/apex-core-tights" element={<MobilePDP />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/lab" element={<MobileLab />} />
           <Route path="/footer-demo" element={<FooterDemo />} />
           <Route path="/auth" element={<Auth />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout" element={<MobileCheckout />} />
           <Route path="/profile" element={<Profile />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

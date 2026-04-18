@@ -11,6 +11,8 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 
+import { siteConfig } from "@/config/site";
+
 const Navbar = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
@@ -50,7 +52,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <Link to="/" className="text-[22px] font-semibold tracking-[0.35em] uppercase" style={{ fontFamily: "'Inter', sans-serif", fontStyle: 'italic' }}>VEXO</Link>
+      <Link to="/" className="text-[22px] font-semibold tracking-[0.35em] uppercase" style={{ fontFamily: "'Inter', sans-serif", fontStyle: 'italic' }}>{siteConfig.name}</Link>
 
       <div className="flex items-center gap-5">
         <Link

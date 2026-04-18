@@ -1,4 +1,5 @@
 import { ClientsSection, Stat, Testimonial } from "@/components/ui/testimonial-card";
+import { siteConfig } from "@/config/site";
 
 // Define the data for the section - Tweaked for VEXO Activewear
 const statsData: Stat[] = [
@@ -11,7 +12,7 @@ const testimonialsData: Testimonial[] = [
   {
     name: "Marcus Jordan",
     title: "Pro Marathon Runner",
-    quote: "VEXO's summer collection is a game changer. The breathability of the Riviera Linen line is unmatched during my high-noon training sessions.",
+    quote: `${siteConfig.name}'s summer collection is a game changer. The breathability of the Riviera Linen line is unmatched during my high-noon training sessions.`,
     avatarSrc: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
     rating: 5.0,
   },
@@ -36,7 +37,7 @@ export default function ClientsSectionDemo() {
     <ClientsSection
       tagLabel="Our Community"
       title="Athlete Approved"
-      description="Join thousands of professionals who trust VEXO for their performance and style needs."
+      description={`Join thousands of professionals who trust ${siteConfig.name} for their performance and style needs.`}
       stats={statsData}
       testimonials={testimonialsData}
       primaryActionLabel="Join The Community"

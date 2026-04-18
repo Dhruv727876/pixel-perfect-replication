@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 const tape = (
   <svg
@@ -24,10 +25,10 @@ export const FooterTapedDesign = () => {
   return (
     <footer className="my-8 px-4 max-w-5xl text-base-content mx-auto font-sans-custom">
       <div className="relative bg-base-200 rounded-3xl max-w-5xl mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-center gap-6 border border-neutral-custom/5 shadow-sm">
-        <div className="hidden md:block absolute -top-4 -left-8 w-[80px] h-[36px] scale-75 opacity-80">
+        <div className="absolute -top-4 -left-4 md:-left-8 w-[80px] h-[36px] scale-50 md:scale-75 opacity-80">
           {tape}
         </div>
-        <div className="hidden md:block absolute -top-4 -right-8 rotate-90 w-[80px] h-[36px] scale-75 opacity-80">
+        <div className="absolute -top-4 -right-4 md:-right-8 rotate-90 w-[80px] h-[36px] scale-50 md:scale-75 opacity-80">
           {tape}
         </div>
         <div className="flex flex-col md:flex-row items-start justify-between gap-4 md:gap-10 px-2 md:px-8 flex-1">
@@ -36,15 +37,14 @@ export const FooterTapedDesign = () => {
               to="/"
               className="flex flex-row gap-1 items-center justify-start text-2xl font-display font-extrabold text-base-content"
             >
-              VEXO
+              {siteConfig.name}
             </Link>
             <p className="text-neutral-custom/50 font-medium text-base w-full md:w-5/6">
-              Precision performance activewear designed for the modern athlete.
-              Elevate your game with VEXO.
+              {siteConfig.shortDescription}
             </p>
             <div className="flex gap-4 items-center mt-2">
               <a
-                href="https://instagram.com"
+                href={siteConfig.links.instagram}
                 target="_blank"
                 rel="nofollow noopener"
                 className="text-neutral-custom/30 hover:text-neutral-custom transition-all"
@@ -52,7 +52,7 @@ export const FooterTapedDesign = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://facebook.com"
+                href={siteConfig.links.facebook}
                 target="_blank"
                 rel="nofollow noopener"
                 className="text-neutral-custom/30 hover:text-neutral-custom transition-all"
@@ -60,7 +60,7 @@ export const FooterTapedDesign = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://x.com"
+                href={siteConfig.links.twitter}
                 target="_blank"
                 rel="nofollow noopener"
                 className="text-neutral-custom/30 hover:text-neutral-custom transition-all"
@@ -68,7 +68,7 @@ export const FooterTapedDesign = () => {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="nofollow noopener"
                 className="text-neutral-custom/30 hover:text-neutral-custom transition-all"
@@ -79,39 +79,8 @@ export const FooterTapedDesign = () => {
           </div>
 
           <div className="flex flex-col md:mx-4 md:flex-row gap-8 md:gap-20 items-start md:items-start">
-            <div className="flex flex-col gap-1 md:gap-4">
-              <h4 className="uppercase font-display text-xs text-neutral-custom/40 font-bold tracking-[0.2em]">
-                Shop
-              </h4>
-              <div className="flex flex-wrap md:flex-col gap-2 text-sm text-neutral items-start">
-                <Link
-                  className="text-neutral-custom/50 whitespace-nowrap font-medium hover:text-neutral-custom transition-colors"
-                  to="/products?sex=Men"
-                >
-                  Men
-                </Link>
-                <Link
-                  className="text-neutral-custom/50 whitespace-nowrap font-medium hover:text-neutral-custom transition-colors"
-                  to="/products?sex=Women"
-                >
-                  Women
-                </Link>
-                <Link
-                  className="text-neutral-custom/50 whitespace-nowrap font-medium hover:text-neutral-custom transition-colors"
-                  to="/products?type=trending"
-                >
-                  Trending
-                </Link>
-                <Link
-                  className="text-neutral-custom/50 whitespace-nowrap font-medium hover:text-neutral-custom transition-colors"
-                  to="/products?type=accessories"
-                >
-                  Accessories
-                </Link>
-              </div>
-            </div>
 
-            <div className="hidden md:flex flex-col gap-1 md:gap-4">
+            <div className="flex flex-col gap-1 md:gap-4">
               <h4 className="uppercase font-display text-xs text-neutral-custom/40 font-bold tracking-[0.2em]">
                 Support
               </h4>
@@ -147,23 +116,23 @@ export const FooterTapedDesign = () => {
       </div>
 
       <div className="my-8 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[13px] text-neutral-custom/40 font-medium border-t border-neutral-custom/5 pt-8">
-        {/* Left: Copyright */}
-        <div className="w-full md:w-1/3 flex justify-start order-2 md:order-1">
+        {/* Left: Copyright - Top on Mobile */}
+        <div className="w-full md:w-1/3 flex justify-center md:justify-start order-1 md:order-1">
           <p className="whitespace-nowrap italic">
-            ©{currentYear} Designed and developed by Dhruv.
+            {siteConfig.footer.copyright}
           </p>
         </div>
 
-        {/* Center: Privacy Policy & TOS */}
-        <div className="w-full md:w-1/3 flex justify-center gap-6 order-3 md:order-2">
+        {/* Center: Privacy Policy & TOS - Middle on Mobile */}
+        <div className="w-full md:w-1/3 flex justify-center gap-6 order-2 md:order-2">
           <Link to="#" className="hover:text-neutral-custom transition-colors">Privacy Policy</Link>
           <Link to="#" className="hover:text-neutral-custom transition-colors">Terms of Service</Link>
         </div>
 
-        {/* Right: Branding & Social Icons */}
-        <div className="w-full md:w-1/3 flex flex-col md:flex-row justify-end items-center gap-4 md:gap-6 order-1 md:order-3">
+        {/* Right: Branding - Bottom on Mobile */}
+        <div className="w-full md:w-1/3 flex flex-col md:flex-row justify-center md:justify-end items-center gap-4 md:gap-6 order-3 md:order-3">
           <p className="whitespace-nowrap">
-            Powered by <span className="font-bold text-neutral-custom/60">HRILAX</span>
+            Powered by <span className="font-bold text-neutral-custom/60">{siteConfig.footer.poweredBy}</span>
           </p>
         </div>
       </div>

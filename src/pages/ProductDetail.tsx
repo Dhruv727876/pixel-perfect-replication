@@ -7,6 +7,8 @@ import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 
+import MobilePDP from "./MobilePDP";
+
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -14,6 +16,17 @@ const ProductDetail = () => {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Scroll to top on mount
   useEffect(() => {
@@ -21,6 +34,10 @@ const ProductDetail = () => {
   }, [id]);
 
   const product = products.find((p) => p.id === id);
+
+  if (isMobile) {
+    return <MobilePDP />;
+  }
 
   if (!product) {
     return (

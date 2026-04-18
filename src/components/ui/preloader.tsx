@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { siteConfig } from "@/config/site";
 
 const Preloader = () => {
   const [loading, setLoading] = useState(true);
@@ -76,7 +76,7 @@ const Preloader = () => {
                   textShadow: "0 10px 30px rgba(0,0,0,0.05)"
                 }}
               >
-                VEXO
+                {siteConfig.name}
               </motion.h1>
             </div>
             
@@ -104,7 +104,7 @@ const Preloader = () => {
           {/* Footer Metadata */}
           <div className="absolute bottom-12 flex flex-col items-center gap-3 opacity-30">
             <div className="w-8 h-[2px] bg-black" />
-            <span className="text-[9px] font-black tracking-[0.4em] uppercase">VEXO ARCHIVE // SEASON 04</span>
+            <span className="text-[9px] font-black tracking-[0.4em] uppercase">{siteConfig.name} ARCHIVE // {siteConfig.hero.desktop.badge}</span>
           </div>
         </motion.div>
       )}
